@@ -1,22 +1,69 @@
 
-body, html {
+html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
-  font-family: sans-serif;
-}
-
-#map {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
   height: 100%;
   width: 100%;
 }
 
-#controls {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  z-index: 1000;
-  background: var(--control-bg);
-  padding: 10px;
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header {
+  background: var(--header-bg);
+  color: var(--header-text);
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.controls-card {
+  background: var(--card-bg);
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+.controls-card input {
+  flex: 1;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.controls-card button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background: var(--primary);
+  color: white;
+  border: none;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+#map-container {
+  flex: 1;
+  position: relative;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }

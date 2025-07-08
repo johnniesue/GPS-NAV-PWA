@@ -1,11 +1,11 @@
 
 {
-  "name": "GPS Navigator",
+  "name": "GPS Navigation PWA",
   "short_name": "GPSNav",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#ffffff",
-  "description": "Live GPS navigation with Firebase and Google Maps",
+  "theme_color": "#0078d4",
   "icons": [
     {
       "src": "icon.png",

@@ -4,17 +4,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GPS Navigator PWA</title>
+  <title>GPS Navigation</title>
   <link rel="manifest" href="manifest.json" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="theme.css" />
-  <script defer src="scripts/map.js"></script>
 </head>
 <body>
-  <div id="map"></div>
-  <div id="controls">
-    <input type="text" id="destination" placeholder="Enter destination" />
-    <button onclick="routeToDestination()">Go</button>
+  <div class="app-container">
+    <header>
+      <h1>GPS Navigation</h1>
+    </header>
+    <main>
+      <section class="controls-card">
+        <input type="text" id="destination" placeholder="Enter destination address" />
+        <button onclick="routeToDestination()">Go</button>
+      </section>
+      <section id="map-container">
+        <div id="map"></div>
+      </section>
+    </main>
   </div>
+
+  <script src="scripts/map.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyDVeLmKQXCMN_JZwNFL90hfCQKVRHsVNy4",
+      authDomain: "a1-customer-dashboard.firebaseapp.com",
+      projectId: "a1-customer-dashboard",
+      storageBucket: "a1-customer-dashboard.appspot.com",
+      messagingSenderId: "981606789719",
+      appId: "1:981606789719:web:8cbd8d3f0a1c9289bda912"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+  </script>
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwP09_HDy1_u_VWDlZbz43CK_17aL-J4I&callback=initMap"></script>
 </body>
 </html>

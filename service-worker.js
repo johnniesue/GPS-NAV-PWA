@@ -2,7 +2,13 @@
 self.addEventListener('install', e => {
   e.waitUntil(
     caches.open('gps-nav-cache').then(cache => {
-      return cache.addAll(['/', '/index.html', '/style.css', '/theme.css', '/scripts/map.js']);
+      return cache.addAll([
+        '/',
+        '/index.html',
+        '/style.css',
+        '/theme.css',
+        '/scripts/map.js'
+      ]);
     })
   );
 });
