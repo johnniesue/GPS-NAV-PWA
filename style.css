@@ -1,0 +1,22 @@
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: sans-serif;
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+}
+
+#controls {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  background: var(--control-bg);
+  padding: 10px;
+  border-radius: 5px;
+}

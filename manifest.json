@@ -1,0 +1,16 @@
+
+{
+  "name": "GPS Navigator",
+  "short_name": "GPSNav",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "description": "Live GPS navigation with Firebase and Google Maps",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

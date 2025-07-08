@@ -1,0 +1,9 @@
+
+:root {
+  --control-bg: rgba(255, 255, 255, 0.9);
+}
+
+/* Alternate themes can be toggled here */
+body.dark {
+  --control-bg: rgba(0, 0, 0, 0.7);
+}
